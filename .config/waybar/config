@@ -1,0 +1,82 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+	"spacing": 3,
+
+	"modules-left": ["hyprland/workspaces", "custom/notion", "custom/vscode", "tray"],
+	"modules-center": ["clock"],
+	"modules-right": ["cpu", "memory", "network", "pulseaudio", "battery", "custom/power"],
+
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"format-occupied": "{name}!",
+		"on-click": "activate"
+	},
+
+	"custom/notion": {
+		"format": " ",
+		"on-click": "notion-app",
+		"tooltip": "Notion"
+	},
+
+	"custom/vscode": {
+		"format": " ",
+		"on-click": "code",
+		"tooltip": "Visual Studio Code"
+	},
+
+	"cpu": {
+		"format": "{usage}%",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+
+	"memory": {
+		"format": "{used:0.1f}GiB",
+		"states": {
+			"warning": 60,
+			"critical": 85,
+		}
+	},
+
+	"network": {
+		"format-wifi": "{essid} {icon}",
+		"format-disconnected": "󰖪",
+		"format-icons": "󰖩"
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": "🔇",
+		"format-icons": ["🔈", "🔉", "🔊"],
+		"format-bluetooth": "󰂯"
+	},
+
+	"battery": {
+		"bat": "BAT0",
+		"interval": 120,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": {
+			"critical": "⚠️",
+			"warning": "🪫",
+			"default": "🔋",
+			"charging": "⚡"
+		} 
+	},
+
+	"custom/power": {
+		"format": "",
+		"on-click": "wlogout -p layer-shell",
+		"tooltip": false
+	},
+	
+	"tray": { "spacing": 10 }
+
+}

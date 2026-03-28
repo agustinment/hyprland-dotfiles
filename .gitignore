@@ -1,0 +1,20 @@
+# Sensitive
+.ssh/
+*.key *.pem *.gpg id_rsa*
+password* token*
+.mozilla/
+.config/mozilla/
+
+# Caches
+.cache/ *.log *.tmp *.bak
+waybar/{cache,state}
+hyprland-session*
+logs/
+*.log.*
+
+
+# Large files
+node_modules/ target/
+
+# Git
+.git/
