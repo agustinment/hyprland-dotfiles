@@ -24,6 +24,9 @@ sudo pacman -S hyprland waybar swaybg wofi kitty
 
 ## Estructura
 .config/
+
 ├── hypr/ # hyprland.conf + keybinds
+
 ├── waybar/ # config + style.css
+
 └── kitty/
